@@ -11,7 +11,7 @@ const SubscribeButton = ({ targetUserId }) => {
   const fetchSubscriptionStatus = async () => {
     try {
       const res = await axios.get(
-        `http://localhost:4000/api/v1/subscriptions/status/${targetUserId}`,
+        `/subscriptions/status/${targetUserId}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -35,7 +35,7 @@ const SubscribeButton = ({ targetUserId }) => {
   const handleSubscribe = async () => {
     try {
       const res = await axios.post(
-        `http://localhost:4000/api/v1/subscriptions/subscribe/${targetUserId}`,
+        `/subscriptions/subscribe/${targetUserId}`,
         {},
         {
           headers: {
@@ -53,7 +53,7 @@ const SubscribeButton = ({ targetUserId }) => {
   const handleUnsubscribe = async () => {
     try {
       const res = await axios.delete(
-        `http://localhost:4000/api/v1/subscriptions/unsubscribe/${targetUserId}`,
+        `/subscriptions/unsubscribe/${targetUserId}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
