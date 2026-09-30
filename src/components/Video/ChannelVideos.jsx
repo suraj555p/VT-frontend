@@ -1,4 +1,3 @@
-// src/components/ChannelVideos.jsx
 import React, { useEffect, useState } from 'react';
 import axios from '../../api/axios.js';
 
@@ -32,7 +31,7 @@ const ChannelVideos = ({ userId }) => {
           key={video._id}
           className="rounded overflow-hidden shadow bg-white dark:bg-gray-800"
         >
-          {/* ✅ Video embed if available */}
+          
           {video.video ? (
             <video
               src={video.video}
@@ -47,7 +46,7 @@ const ChannelVideos = ({ userId }) => {
             />
           )}
 
-          {/* Video metadata */}
+          
           <div className="p-3">
             <h4 className="text-base font-semibold text-gray-800 dark:text-white truncate">
               {video.title}

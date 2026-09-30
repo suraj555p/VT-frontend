@@ -30,7 +30,7 @@ const ChangePassword = () => {
 
       const res = await axios.patch(
         '/users/changePassword',
-        { oldpassword, newpassword }, // ✅ must match backend controller
+        { oldpassword, newpassword },
         {
           headers: {
             Authorization: `Bearer ${token}`,

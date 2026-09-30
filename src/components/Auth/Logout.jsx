@@ -1,4 +1,3 @@
-// src/components/Auth/Logout.jsx
 import React, { useEffect } from 'react';
 import axios from '../../api/axios';
 import { useNavigate } from 'react-router-dom';
@@ -9,10 +8,8 @@ const Logout = () => {
   useEffect(() => {
     const doLogout = async () => {
       try {
-        // 1. Remove user info from localStorage
         localStorage.removeItem('videotube-user');
 
-        // 2. Send request to backend to clear token cookie
         await axios.post('/users/logout', {}, {
           withCredentials: true,
         });

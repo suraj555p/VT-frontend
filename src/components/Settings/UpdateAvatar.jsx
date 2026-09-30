@@ -14,7 +14,7 @@ const UpdateAvatar = () => {
     if (!avatar) return setMessage('Please select an image.');
 
     const formData = new FormData();
-    formData.append('avatarImage', avatar); // must match backend field name
+    formData.append('avatarImage', avatar);
 
     try {
       const storedUser = localStorage.getItem('videotube-user');
@@ -36,7 +36,7 @@ const UpdateAvatar = () => {
           Authorization: `Bearer ${token}`,
           'Content-Type': 'multipart/form-data',
         },
-        withCredentials: true, // Optional if you're also using cookies
+        withCredentials: true,
       });
 
       setMessage('Avatar updated successfully!');

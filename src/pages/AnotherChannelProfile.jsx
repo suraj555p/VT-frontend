@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from '../api/axios.js';
-import ChannelVideos from '../components/Video/ChannelVideos.jsx'; // ⬅️ Import it
+import ChannelVideos from '../components/Video/ChannelVideos.jsx';
 
 const AnotherChannelProfile = () => {
   const { username } = useParams();
@@ -40,7 +40,7 @@ const AnotherChannelProfile = () => {
 
   return (
     <div className="max-w-5xl mx-auto p-4">
-      {/* Cover Image */}
+      
       {channel.coverImage && (
         <div className="mb-4">
           <img
@@ -51,7 +51,7 @@ const AnotherChannelProfile = () => {
         </div>
       )}
 
-      {/* Avatar and Basic Info */}
+      
       <div className="flex flex-col sm:flex-row sm:items-center gap-4 mb-6">
         <img
           src={channel.avatarImage || '/default-avatar.png'}
@@ -67,7 +67,7 @@ const AnotherChannelProfile = () => {
         </div>
       </div>
 
-      {/* Channel Stats */}
+      
       <div className="flex flex-wrap gap-6 text-sm text-gray-700 dark:text-gray-300 mb-4">
         <p>
           <strong>{channel.subscribersCount}</strong> Subscribers
@@ -87,7 +87,7 @@ const AnotherChannelProfile = () => {
         Viewing public profile of <strong>{channel.username}</strong>.
       </p>
 
-      {/* Channel Videos Section */}
+      
       <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-2">
         {channel.username}'s Videos
       </h3>

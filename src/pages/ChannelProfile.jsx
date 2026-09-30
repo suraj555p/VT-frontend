@@ -7,7 +7,7 @@ const ChannelProfile = () => {
   const [channel, setChannel] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  const isOwnProfile = !username; // if no username param, assume current user
+  const isOwnProfile = !username;
 
   useEffect(() => {
     const fetchChannel = async () => {

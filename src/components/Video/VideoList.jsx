@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from '../../api/axios.js';
 import { Link } from 'react-router-dom';
-import SubscribedChannels from './SubscribedChannels.jsx'; // update path as needed
+import SubscribedChannels from './SubscribedChannels.jsx';
 
 const VideoList = () => {
   const [videos, setVideos] = useState([]);
@@ -27,7 +27,7 @@ const VideoList = () => {
 
   return (
     <div className="flex">
-      {/* Sidebar: Subscribed Channels */}
+      
   {isLoggedIn && (
   <aside className="w-64 hidden sm:flex flex-col p-4 border-r bg-gray-50 dark:bg-gray-900 overflow-y-auto max-h-screen">
     <SubscribedChannels />
@@ -35,7 +35,7 @@ const VideoList = () => {
 )}
 
 
-      {/* Main Video Grid */}
+      
       <div className="flex-1 p-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         {videos.length === 0 ? (
           <p className="col-span-full text-center text-gray-500">

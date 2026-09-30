@@ -14,7 +14,7 @@ const UpdateCover = () => {
     if (!cover) return setMessage('Please select an image.');
 
     const formData = new FormData();
-    formData.append('coverImage', cover); // ✅ field must match backend key
+    formData.append('coverImage', cover);
 
     try {
       const storedUser = localStorage.getItem('videotube-user');
@@ -33,7 +33,7 @@ const UpdateCover = () => {
           Authorization: `Bearer ${token}`,
           'Content-Type': 'multipart/form-data',
         },
-        withCredentials: true, // ✅ optional if you switch to cookie auth
+        withCredentials: true,
       });
 
       setMessage('Cover image updated successfully!');

@@ -1,5 +1,5 @@
 import React from 'react';
-import SubscribeButton from './SubscribeButton.jsx'; // Adjust path as needed
+import SubscribeButton from './SubscribeButton.jsx';
 
 const VideoPlayer = ({ video }) => {
   if (!video) {

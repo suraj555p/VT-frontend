@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from "../../api/axios.js";
-import { Link } from 'react-router-dom'; // ⬅️ import Link
+import { Link } from 'react-router-dom';
 
 const SubscribedChannels = () => {
   const [channels, setChannels] = useState([]);
@@ -43,7 +43,7 @@ const SubscribedChannels = () => {
         {channels.map((item) => (
           <Link
             key={item._id}
-            to={`/anotherchannel/${item.channel?.username}`} // ⬅️ dynamic route
+            to={`/anotherchannel/${item.channel?.username}`}
             className="flex items-center p-3 bg-white dark:bg-gray-800 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-200 cursor-pointer group"
           >
             <img

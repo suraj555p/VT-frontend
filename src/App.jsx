@@ -14,7 +14,7 @@ import UpdateCover from './components/Settings/UpdateCover';
 import ChangePassword from './components/Settings/ChangePassword';
 import AnotherChannelProfile from './pages/AnotherChannelProfile';
 import ChannelVideos from './components/Video/ChannelVideos';
-import SubscribedChannels from './components/Video/SubscribedChannels'; // ✅ NEW import
+import SubscribedChannels from './components/Video/SubscribedChannels';
 
 function App() {
   const [user, setUser] = useState(null);
@@ -57,7 +57,7 @@ function App() {
           VideoTube
         </Link>
 
-        {/* Hamburger menu for small screens */}
+        
         <button
           className="md:hidden text-gray-700 dark:text-gray-200 focus:outline-none"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -109,7 +109,7 @@ function App() {
                       <Link to={`/channel/${user.username}`} className="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">
                         View Profile
                       </Link>
-                           {/* ✅ Subscribed link */}
+                           
                           <Link to="/subscribed-channels" className="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">
                            Subscribed Channel
                           </Link>
@@ -161,7 +161,7 @@ function App() {
           <Route path="/my-videos" element={<MyVideos />} />
           <Route path="/anotherchannel/:username" element={<AnotherChannelProfile />} />
           <Route path="/channel/:id/videos" element={<ChannelVideos />} />
-          <Route path="/subscribed-channels" element={<SubscribedChannels />} /> {/* ✅ New Route */}
+          <Route path="/subscribed-channels" element={<SubscribedChannels />} /> 
         </Routes>
       </main>
     </Router>

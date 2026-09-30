@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import axios from "../../api/axios.js"; // Using full URL
+import axios from "../../api/axios.js";
 
 const SubscribeButton = ({ targetUserId }) => {
   const [isSubscribed, setIsSubscribed] = useState(false);
